@@ -8,6 +8,10 @@ const router = createRouter({
       name: "TodoList",
       component: () => import("@/views/TodoListView.vue"),
     },
+    {
+      path: "/:pathMatch(.*)",
+      redirect: "/todo_list",
+    },
   ],
 });
 
